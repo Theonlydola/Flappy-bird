@@ -1,0 +1,13 @@
+.gameBoard {
+    background-color: #6EC2CC;
+    /* justify-content: center; */
+    overflow: hidden;
+}
+
+.score {
+    font-size: 72px;
+    color: white;
+    position: absolute;
+    left: 50%;
+    bottom: 85%;
+}
