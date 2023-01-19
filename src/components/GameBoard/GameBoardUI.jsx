@@ -13,7 +13,9 @@ function GameBoardUI({
   obstacleWidth,
   obstaclePosition,
   gap,
-  score
+  score,
+  gameStarted,
+  onStart
 }) {
 
   return <div
@@ -48,9 +50,10 @@ function GameBoardUI({
     />
 
     <div className='score'>
-        {score}
+      {score}
     </div>
 
+    {!gameStarted && <input type="button" value="START" onClick={onStart} />}
 
   </div>
 }

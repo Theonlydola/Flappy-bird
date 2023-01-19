@@ -58,16 +58,18 @@ function GameBoard() {
         const bottomCollision = birdPosition >= 1000 - bottomObstacleHeight;
         if (obstaclePosition >= 0 && obstaclePosition <= OBSTACLE_WIDTH && (topCollision || bottomCollision)) {
             setGameStarted(false);
-            setScore((score) => score - 2);
+            setBirdPosition(500);
         }
     }, [birdPosition, topObstacleHeight, bottomObstacleHeight, obstaclePosition])
 
-    function onJump() {
+    function onStart(){
         if (!gameStarted) {
             setGameStarted(true);
             setScore(0);
+            setBirdPosition(500);
         }
-
+    }
+    function onJump() {
         if (gameStarted && birdPosition > BIRD_SIZE)
             setBirdPosition((birdPosition) => birdPosition - JUMP_POWER);
     }
@@ -84,6 +86,8 @@ function GameBoard() {
         obstaclePosition={obstaclePosition}
         gap={GAP}
         score={score}
+        gameStarted={gameStarted}
+        onStart={onStart}
     />
 }
 

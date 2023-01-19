@@ -11,3 +11,23 @@
     left: 50%;
     bottom: 85%;
 }
+
+input {
+    color: green;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 100px;
+    position: absolute;
+    border-radius: 20% 15% 15% 0%;
+    border: none;
+    background-color: #6EC2CC;
+    width: 15%;
+    height: 10%;
+    left: 43%;
+    top: 45%;
+    text-decoration: wavy;
+}
+
+input:hover {
+    scale: 1.5;
+    cursor: pointer;
+}
